@@ -1,7 +1,7 @@
 {
   "name": "yugabyte-wrapper",
   "version": "1.0.0",
-  "description": "Wrapping the YSQL and YCQL drivers in one single package",
+  "description": "Wrapping the YSQL and YCQL drivers for postgres and cassandra in one single package",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/nijova/yugabyte-wrapper/issues"
   },
-  "homepage": "https://github.com/nijova/yugabyte-wrapper#readme"
+  "homepage": "https://github.com/nijova/yugabyte-wrapper#readme",
+  "dependencies": {
+    "cassandra-driver": "^4.6.3",
+    "pg": "^8.7.3"
+  }
 }
