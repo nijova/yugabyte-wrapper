@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/nijova/yugabyte-wrapper#readme",
   "dependencies": {
-    "cassandra-driver": "^4.6.3",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "yb-ycql-driver": "^4.0.0"
   }
 }
