@@ -1,0 +1,27 @@
+{
+  "name": "yugabyte-wrapper",
+  "version": "1.0.0",
+  "description": "Wrapping the YSQL and YCQL drivers in one single package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nijova/yugabyte-wrapper.git"
+  },
+  "keywords": [
+    "Yugabyte",
+    "YSQL",
+    "YCQL",
+    "drivers",
+    "database",
+    "access"
+  ],
+  "author": "nijova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nijova/yugabyte-wrapper/issues"
+  },
+  "homepage": "https://github.com/nijova/yugabyte-wrapper#readme"
+}
