@@ -1,6 +1,6 @@
-const cassandraDriver = require('yb-ycql-driver');
-const postgresDriver = require('pg');
+const cassandra = require('yb-ycql-driver');
+const postgres = require('pg');
 
-const yugabyteDrivers = {cassandraDriver, postgresDriver};
+const drivers = {cassandra, postgres};
 
-module.exports = { yugabyteDrivers }
+module.exports = { drivers }

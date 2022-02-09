@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/nijova/yugabyte-wrapper#readme",
   "dependencies": {
+    "assert": "^2.0.0",
+    "async": "^3.2.3",
     "pg": "^8.7.3",
     "yb-ycql-driver": "^4.0.0"
   }
