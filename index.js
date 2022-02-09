@@ -1,15 +1,16 @@
 const drivers = (require('./src/drivers.js')).drivers;
 
-const getPostgresClient = (connectionString) => new drivers.postgres.Client(connectionString);
+const getPostgresClient = (config) => new drivers.postgres.Client(config);
 
 const cassandraPolicies = drivers.cassandra.policies;
-const getCassandraClient = (contactPoints, policies) => new drivers.cassandra.Client({ contactPoints, policies });
+const getCassandraClient = (options) => new drivers.cassandra.Client(options);
 
 // const async = require('async');
 // const assert = require('assert');
 
-var conString = "postgres://postgres@localhost:5433/postgres";
-var postgresClient = getPostgresClient(conString);
+var connectionString = "postgres://postgres@localhost:5433/postgres";
+var postgresClient = getPostgresClient([connectionString]);
 
-const loadBalancing = new cassandraPolicies.loadBalancing.RoundRobinPolicy();
-const cassandraClient = getCassandraClient( ['127.0.0.1'], { loadBalancing });
+let loadBalancing = new cassandraPolicies.loadBalancing.RoundRobinPolicy();
+let contactPoints = ['127.0.0.1']; 
+const cassandraClient = getCassandraClient({contactPoints, loadBalancing});
