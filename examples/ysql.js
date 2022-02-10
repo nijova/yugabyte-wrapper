@@ -2,10 +2,11 @@ const YSQL = require('../index.js').YSQL;
 const async = require('async');
 const assert = require('assert');
 
+// Make sure the connectionString and credentials allow you to reach your DB.
 let connectionString = "postgres://postgres@localhost:5433/postgres";
 const client = YSQL.getPostgresClient( {connectionString} );
 
-let data = {id:1, name: 'John', age: 35, city: 'New York'};
+let data = {id:1, name: 'Johnny', age: 35, city: 'New York'};
 const example = async (data) => {
     try {
         await async.series([
@@ -14,7 +15,7 @@ const example = async (data) => {
                 client.query(create_table, next);
             },
             (next) => {
-                const insert = `INSERT INTO person (id, name, age, city) VALUES (${data.id}, "${data.name}", ${data.age}, "${data.city}");`;
+                const insert = `INSERT INTO person (id, name, age, city) VALUES (${data.id}, '${data.name}', ${data.age}, '${data.city}');`;
                 client.query(insert, next);
             },
             (next) => {
@@ -27,20 +28,20 @@ const example = async (data) => {
                     let row = result.rows[0];
                     assert(row.name == data.name);
                     assert(row.age == data.age);
-                    assert(row.city == data.name);
+                    assert(row.city == data.city);
+                    console.log('Data asserted.');
                     next();
                 });
             }
-        ])
+        ]);
     } finally {
         await async.series([
             (next) => {
-                console.log(123)
                 const deletion = `DROP TABLE person;`;
                 client.query(deletion, next);
             },
             (next) => client.end(next)
-        ])
+        ]);
     }    
 };
 
