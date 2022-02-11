@@ -2,12 +2,13 @@ const YSQL = require('../index.js').YSQL;
 
 describe("Getting YSQL client", function() {  
     let connectionString = "postgres://postgres@localhost:5433/postgres";
+    let configuration = {connectionString};
     beforeEach(function() {
-        spyOn(YSQL, 'getPostgresClient');
-        const ysqlClient = YSQL.getPostgresClient({connectionString});
+        spyOn(YSQL.postgresDriver, 'Client');
+        const ysqlClient = YSQL.getPostgresClient(configuration);
     }); 
   
     it("calls getClient with configuration", function() {
-      expect(YSQL.getPostgresClient).toHaveBeenCalledWith({connectionString});
+      expect(YSQL.postgresDriver.Client).toHaveBeenCalledWith(configuration);
     });
 });
