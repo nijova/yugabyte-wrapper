@@ -1,4 +1,4 @@
-const YSQL = require('../index.js').YSQL;
+const YSQL = require('yugabyte').YSQL;
 const async = require('async');
 const assert = require('assert');
 

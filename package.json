@@ -1,6 +1,6 @@
 {
   "name": "yugabyte",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Yugabyte's YSQL and YCQL drivers for postgres and cassandra in one single package",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,8 @@
     "assert": "^2.0.0",
     "async": "^3.2.3",
     "pg": "^8.7.3",
-    "yb-ycql-driver": "^4.0.0"
+    "yb-ycql-driver": "^4.0.0",
+    "yugabyte": "^1.0.2"
   },
   "devDependencies": {
     "jasmine": "^4.0.2"
