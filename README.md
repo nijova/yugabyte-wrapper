@@ -1,2 +1,3 @@
 # yugabyte-wrapper
-Wrapping the YSQL and YCQL drivers for postgres and cassandra in one single package to connect to YugabyteDB
+
+Yugabyte's YSQL and YCQL drivers for postgres and cassandra in one single package
