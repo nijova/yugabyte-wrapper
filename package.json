@@ -1,7 +1,7 @@
 {
   "name": "yugabyte-wrapper",
   "version": "1.0.0",
-  "description": "Wrapping the YSQL and YCQL drivers for postgres and cassandra in one single package",
+  "description": "Wrapping Yugabyte's YSQL and YCQL drivers for postgres and cassandra in one single package",
   "main": "index.js",
   "scripts": {
     "test": "jasmine"
