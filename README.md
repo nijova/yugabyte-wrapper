@@ -28,6 +28,8 @@ const ysqlClient = YSQL.getPostgresClient(config);
 
 Require the driver, set the options, create the client: 
 
+```
 const YCQL = require('yugabyte').YCQL;
 const options = {};
 const ycqlClient = YCQL.getCassandraClient(options);
+```
