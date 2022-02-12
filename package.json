@@ -1,6 +1,6 @@
 {
   "name": "yugabyte",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Yugabyte's YSQL and YCQL drivers for postgres and cassandra in one single package",
   "main": "index.js",
   "scripts": {
