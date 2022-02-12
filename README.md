@@ -14,6 +14,8 @@ npm install -S yugabyte
 
 You can use either the YSQL or YCQL driver.
 
+Refer to the ./examples  to see basic usage of the drivers.
+
 ### YSQL
 
 Require the driver, set the configuration, create the client: 
@@ -33,3 +35,4 @@ const YCQL = require('yugabyte').YCQL;
 const options = {};
 const ycqlClient = YCQL.getCassandraClient(options);
 ```
+
