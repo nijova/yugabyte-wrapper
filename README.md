@@ -1,6 +1,8 @@
-# yugabyte
+# Yugabyte npm
 
 Yugabyte's YSQL and YCQL drivers for postgres and cassandra in one single package
+
+Check it out at [https://www.npmjs.com/package/yugabyte](https://www.npmjs.com/package/yugabyte)
 
 ## Installation
 
